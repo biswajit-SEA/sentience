@@ -1890,8 +1890,23 @@ def process_audio_files(audio_paths):
     # Load and run audio model here
     try:
         logger.info(f"Processing {len(audio_paths)} audio file(s)")
-        # Placeholder implementation
-        return "audio model result"
+        
+        # Import the audioAnalysis module
+        from models.audioAnalysis import __main__ as audio_analysis_main
+        
+        # Process each audio file and collect results
+        results = []
+        for audio_path in audio_paths:
+            logger.info(f"Processing audio file: {audio_path}")
+            # Call the main function from audioAnalysis.py with the file path
+            emotion = audio_analysis_main(audio_path)
+            results.append({
+                "file": os.path.basename(audio_path),
+                "emotion": emotion
+            })
+        
+        # Return the results
+        return results
     except Exception as e:
         logger.error(f"Error processing audio files: {str(e)}")
         return "Error processing audio"
@@ -2098,6 +2113,17 @@ def create_admin_recovery():
             ),
             500,
         )
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    logger.warning(f"Page not found: {request.path}")
+    # For AJAX requests, return JSON
+    if request.headers.get("X-Requested-With") == "XMLHttpRequest":
+        return jsonify({"error": "The requested resource was not found"}), 404
+
+    # For regular requests, render the error template
+    return render_template("error.html", error="The page you're looking for doesn't exist."), 404
 
 
 @app.errorhandler(Exception)

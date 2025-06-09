@@ -2218,3 +2218,170 @@ OSError: [WinError 10038] An operation was attempted on something that is not a 
 2025-06-09 10:18:40,183 - werkzeug - INFO -  * Restarting with stat
 2025-06-09 10:18:48,920 - werkzeug - WARNING -  * Debugger is active!
 2025-06-09 10:18:48,926 - werkzeug - INFO -  * Debugger PIN: 144-627-113
+2025-06-09 12:52:28,993 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.159.62:8000
+2025-06-09 12:52:28,993 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-09 12:52:28,995 - werkzeug - INFO -  * Restarting with stat
+2025-06-09 12:52:36,969 - werkzeug - WARNING -  * Debugger is active!
+2025-06-09 12:52:36,974 - werkzeug - INFO -  * Debugger PIN: 144-627-113
+2025-06-09 13:02:25,170 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.159.62:8000
+2025-06-09 13:02:25,170 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-09 13:02:25,172 - werkzeug - INFO -  * Restarting with stat
+2025-06-09 13:02:34,929 - werkzeug - WARNING -  * Debugger is active!
+2025-06-09 13:02:34,934 - werkzeug - INFO -  * Debugger PIN: 144-627-113
+2025-06-09 13:02:37,745 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:02:37] "[32mGET / HTTP/1.1[0m" 302 -
+2025-06-09 13:02:38,009 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:02:38] "GET /login?next=/ HTTP/1.1" 200 -
+2025-06-09 13:02:38,124 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:02:38] "GET /static/css/index.css HTTP/1.1" 200 -
+2025-06-09 13:02:38,375 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:02:38] "GET /static/css/login.css HTTP/1.1" 200 -
+2025-06-09 13:02:38,375 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:02:38] "GET /static/js/session-timeout.js HTTP/1.1" 200 -
+2025-06-09 13:02:38,378 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:02:38] "GET /static/images/team-logo-bg.png HTTP/1.1" 200 -
+2025-06-09 13:02:38,381 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:02:38] "GET /static/images/techm-logo.png HTTP/1.1" 200 -
+2025-06-09 13:02:38,687 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:02:38] "GET /static/js/login.js HTTP/1.1" 200 -
+2025-06-09 13:02:38,689 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:02:38] "GET /static/images/background-1.png HTTP/1.1" 200 -
+2025-06-09 13:02:39,744 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:02:39] "GET /static/images/team-logo-small.png HTTP/1.1" 200 -
+2025-06-09 13:02:57,021 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:02:57] "GET /signup HTTP/1.1" 200 -
+2025-06-09 13:02:57,380 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:02:57] "GET /static/css/signup.css HTTP/1.1" 200 -
+2025-06-09 13:02:57,380 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:02:57] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2025-06-09 13:02:57,381 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:02:57] "[36mGET /static/js/session-timeout.js HTTP/1.1[0m" 304 -
+2025-06-09 13:02:57,383 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:02:57] "[36mGET /static/images/team-logo-bg.png HTTP/1.1[0m" 304 -
+2025-06-09 13:02:57,390 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:02:57] "[36mGET /static/images/techm-logo.png HTTP/1.1[0m" 304 -
+2025-06-09 13:02:57,624 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:02:57] "GET /static/js/signup.js HTTP/1.1" 200 -
+2025-06-09 13:02:57,689 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:02:57] "[36mGET /static/images/background-1.png HTTP/1.1[0m" 304 -
+2025-06-09 13:13:51,450 - werkzeug - INFO -  * Detected change in 'D:\\Dev\\hackathon\\tech-hackathon-new\\models\\audioAnalysis.py', reloading
+2025-06-09 13:13:52,667 - werkzeug - INFO -  * Restarting with stat
+2025-06-09 13:14:02,505 - werkzeug - WARNING -  * Debugger is active!
+2025-06-09 13:14:02,512 - werkzeug - INFO -  * Debugger PIN: 144-627-113
+2025-06-09 13:19:00,121 - werkzeug - INFO -  * Detected change in 'D:\\Dev\\hackathon\\tech-hackathon-new\\hackathon.py', reloading
+2025-06-09 13:19:01,232 - werkzeug - INFO -  * Restarting with stat
+2025-06-09 13:19:09,857 - werkzeug - WARNING -  * Debugger is active!
+2025-06-09 13:19:09,863 - werkzeug - INFO -  * Debugger PIN: 144-627-113
+2025-06-09 13:19:13,548 - werkzeug - INFO -  * Detected change in 'D:\\Dev\\hackathon\\tech-hackathon-new\\models\\audioAnalysis.py', reloading
+2025-06-09 13:19:14,525 - werkzeug - INFO -  * Restarting with stat
+2025-06-09 13:19:22,812 - werkzeug - WARNING -  * Debugger is active!
+2025-06-09 13:19:22,817 - werkzeug - INFO -  * Debugger PIN: 144-627-113
+2025-06-09 13:19:26,681 - werkzeug - INFO -  * Detected change in 'D:\\Dev\\hackathon\\tech-hackathon-new\\hackathon.py', reloading
+2025-06-09 13:19:27,542 - werkzeug - INFO -  * Restarting with stat
+2025-06-09 13:19:36,471 - werkzeug - WARNING -  * Debugger is active!
+2025-06-09 13:19:36,477 - werkzeug - INFO -  * Debugger PIN: 144-627-113
+2025-06-09 13:22:35,399 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:22:35] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-06-09 13:22:35,652 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:22:35] "GET /login?next=/logout HTTP/1.1" 200 -
+2025-06-09 13:22:35,769 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:22:35] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2025-06-09 13:22:35,975 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:22:35] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-06-09 13:22:35,977 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:22:35] "[36mGET /static/js/session-timeout.js HTTP/1.1[0m" 304 -
+2025-06-09 13:22:36,080 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:22:36] "[36mGET /static/images/team-logo-bg.png HTTP/1.1[0m" 304 -
+2025-06-09 13:22:36,080 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:22:36] "[36mGET /static/images/techm-logo.png HTTP/1.1[0m" 304 -
+2025-06-09 13:22:36,086 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:22:36] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-06-09 13:22:39,140 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:22:39] "[36mGET /static/images/background-1.png HTTP/1.1[0m" 304 -
+2025-06-09 13:27:40,144 - werkzeug - INFO -  * Detected change in 'D:\\Dev\\hackathon\\tech-hackathon-new\\hackathon.py', reloading
+2025-06-09 13:27:41,031 - werkzeug - INFO -  * Restarting with stat
+2025-06-09 13:27:49,914 - werkzeug - WARNING -  * Debugger is active!
+2025-06-09 13:27:49,919 - werkzeug - INFO -  * Debugger PIN: 144-627-113
+2025-06-09 13:28:28,422 - werkzeug - INFO -  * Detected change in 'D:\\Dev\\hackathon\\tech-hackathon-new\\models\\audioAnalysis.py', reloading
+2025-06-09 13:28:29,496 - werkzeug - INFO -  * Restarting with stat
+2025-06-09 13:28:38,450 - werkzeug - WARNING -  * Debugger is active!
+2025-06-09 13:28:38,456 - werkzeug - INFO -  * Debugger PIN: 144-627-113
+2025-06-09 13:29:58,871 - werkzeug - INFO -  * Detected change in 'D:\\Dev\\hackathon\\tech-hackathon-new\\hackathon.py', reloading
+2025-06-09 13:29:59,794 - werkzeug - INFO -  * Restarting with stat
+2025-06-09 13:30:09,924 - werkzeug - WARNING -  * Debugger is active!
+2025-06-09 13:30:09,930 - werkzeug - INFO -  * Debugger PIN: 144-627-113
+2025-06-09 13:30:48,256 - werkzeug - INFO -  * Detected change in 'D:\\Dev\\hackathon\\tech-hackathon-new\\hackathon.py', reloading
+2025-06-09 13:30:49,133 - werkzeug - INFO -  * Restarting with stat
+2025-06-09 13:30:58,350 - werkzeug - WARNING -  * Debugger is active!
+2025-06-09 13:30:58,356 - werkzeug - INFO -  * Debugger PIN: 144-627-113
+2025-06-09 13:32:08,712 - werkzeug - INFO -  * Detected change in 'D:\\Dev\\hackathon\\tech-hackathon-new\\hackathon.py', reloading
+2025-06-09 13:32:09,574 - werkzeug - INFO -  * Restarting with stat
+2025-06-09 13:32:17,770 - werkzeug - WARNING -  * Debugger is active!
+2025-06-09 13:32:17,776 - werkzeug - INFO -  * Debugger PIN: 144-627-113
+2025-06-09 13:32:20,312 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:32:20] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-06-09 13:32:20,454 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:32:20] "GET / HTTP/1.1" 200 -
+2025-06-09 13:32:20,666 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:32:20] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2025-06-09 13:32:20,795 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:32:20] "[36mGET /static/js/session-timeout.js HTTP/1.1[0m" 304 -
+2025-06-09 13:32:20,795 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:32:20] "[36mGET /static/images/team-logo-bg.png HTTP/1.1[0m" 304 -
+2025-06-09 13:32:20,797 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:32:20] "[36mGET /static/images/techm-logo.png HTTP/1.1[0m" 304 -
+2025-06-09 13:32:20,803 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:32:20] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-06-09 13:32:21,111 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:32:21] "[36mGET /static/images/background-1.png HTTP/1.1[0m" 304 -
+2025-06-09 13:33:11,557 - __main__ - INFO - Processing 1 audio file(s)
+2025-06-09 13:33:11,568 - __main__ - INFO - Processing audio file: uploads\03-01-01-01-01-01-01.wav
+2025-06-09 13:34:44,426 - huggingface_hub.file_download - WARNING - Error while downloading from https://cdn-lfs-us-1.hf.co/repos/cb/ed/cbeddc1bff59ab847e16ebb54e43892a254eac8dc0331566c164324466578615/d5a5dfcd9cf69910985915961f7cbf77d11c935dfd472a7c38f3ae1110a48eba?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1749459793&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0OTQ1OTc5M319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zL2NiL2VkL2NiZWRkYzFiZmY1OWFiODQ3ZTE2ZWJiNTRlNDM4OTJhMjU0ZWFjOGRjMDMzMTU2NmMxNjQzMjQ0NjY1Nzg2MTUvZDVhNWRmY2Q5Y2Y2OTkxMDk4NTkxNTk2MWY3Y2JmNzdkMTFjOTM1ZGZkNDcyYTdjMzhmM2FlMTExMGE0OGViYT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=vg2YATJDH8RKrEixJtMvNz7CrDvc4bW%7E-JO6Q1bsyWv%7E6wObfueFL1a-%7EFelCfSf23hxtcXQ%7E6r0ATGo%7Eap96R7CFLk-qwEWSGkuaeajZfPoH%7EkeKcsxMwHlH53a3but5FjJMTliAfddXnmk-ZH1uDVDvlHt7SrcktjFJjBozSC0dANgXcAzDYnpFDyj70Fi4iMXK59w0XEuxcxRdC4BwSaAmjqJ11RSxbnbZPFdgQflwAVfqqbhXGjzD4Ki3psmcNjg4Glpn3oqJD6dcdxwZZhYXsonmPB-TO9nRfloP7u7Udfh6IgpzGvqobLOUmQZiwHl0nsYvrtxVlbBBWYLrw__&Key-Pair-Id=K24J24Z295AEI9: HTTPSConnectionPool(host='cdn-lfs-us-1.hf.co', port=443): Read timed out.
+Trying to resume download...
+2025-06-09 13:34:56,715 - __main__ - ERROR - Error processing audio files: (ReadTimeoutError("HTTPSConnectionPool(host='cdn-lfs-us-1.hf.co', port=443): Read timed out. (read timeout=10)"), '(Request ID: 9b9906d7-4832-4d1d-9103-5ad4541e0a1f)')
+2025-06-09 13:34:56,715 - __main__ - INFO - Processing 1 data file(s)
+2025-06-09 13:34:56,715 - __main__ - INFO - Loading pre-trained model from models/output/Random_Forest_model.pkl
+2025-06-09 13:34:56,985 - __main__ - INFO - Processing file: uploads\validationset1.xlsx
+2025-06-09 13:34:57,258 - __main__ - INFO - Found customer ID: 15634602
+2025-06-09 13:35:22,788 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:35:22] "GET / HTTP/1.1" 200 -
+2025-06-09 13:35:24,425 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:35:24] "[36mGET /static/images/team-logo-bg.png HTTP/1.1[0m" 304 -
+2025-06-09 13:35:24,425 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:35:24] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2025-06-09 13:35:24,425 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:35:24] "[36mGET /static/js/session-timeout.js HTTP/1.1[0m" 304 -
+2025-06-09 13:35:24,429 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:35:24] "[36mGET /static/images/techm-logo.png HTTP/1.1[0m" 304 -
+2025-06-09 13:35:24,678 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:35:24] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-06-09 13:35:24,748 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:35:24] "[36mGET /static/images/background-1.png HTTP/1.1[0m" 304 -
+2025-06-09 13:35:24,762 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:35:24] "[36mGET /static/images/team-logo-small.png HTTP/1.1[0m" 304 -
+2025-06-09 13:35:42,615 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:35:42] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-06-09 13:35:42,883 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:35:42] "GET /login HTTP/1.1" 200 -
+2025-06-09 13:35:42,922 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:35:42] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2025-06-09 13:35:43,224 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:35:43] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-06-09 13:35:43,226 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:35:43] "[36mGET /static/js/session-timeout.js HTTP/1.1[0m" 304 -
+2025-06-09 13:35:43,227 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:35:43] "[36mGET /static/images/team-logo-bg.png HTTP/1.1[0m" 304 -
+2025-06-09 13:35:43,232 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:35:43] "[36mGET /static/images/techm-logo.png HTTP/1.1[0m" 304 -
+2025-06-09 13:35:43,233 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:35:43] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-06-09 13:36:21,856 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:36:21] "GET /login HTTP/1.1" 200 -
+2025-06-09 13:36:22,103 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:36:22] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2025-06-09 13:36:22,196 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:36:22] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-06-09 13:36:22,197 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:36:22] "[36mGET /static/js/session-timeout.js HTTP/1.1[0m" 304 -
+2025-06-09 13:36:22,202 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:36:22] "[36mGET /static/images/team-logo-bg.png HTTP/1.1[0m" 304 -
+2025-06-09 13:36:22,203 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:36:22] "[36mGET /static/images/techm-logo.png HTTP/1.1[0m" 304 -
+2025-06-09 13:36:22,205 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:36:22] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-06-09 13:36:22,522 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:36:22] "[36mGET /static/images/background-1.png HTTP/1.1[0m" 304 -
+2025-06-09 13:36:44,697 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:36:44] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-06-09 13:36:45,020 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:36:45] "GET / HTTP/1.1" 200 -
+2025-06-09 13:36:45,262 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:36:45] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2025-06-09 13:36:45,359 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:36:45] "[36mGET /static/js/session-timeout.js HTTP/1.1[0m" 304 -
+2025-06-09 13:36:45,360 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:36:45] "[36mGET /static/images/team-logo-bg.png HTTP/1.1[0m" 304 -
+2025-06-09 13:36:45,364 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:36:45] "[36mGET /static/images/techm-logo.png HTTP/1.1[0m" 304 -
+2025-06-09 13:36:45,366 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:36:45] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-06-09 13:36:52,058 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:36:52] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-09 13:36:52,306 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:36:52] "GET / HTTP/1.1" 200 -
+2025-06-09 13:36:55,716 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:36:55] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-06-09 13:36:56,023 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:36:56] "GET /login HTTP/1.1" 200 -
+2025-06-09 13:36:56,278 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:36:56] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2025-06-09 13:36:56,363 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:36:56] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-06-09 13:36:56,363 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:36:56] "[36mGET /static/js/session-timeout.js HTTP/1.1[0m" 304 -
+2025-06-09 13:36:56,365 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:36:56] "[36mGET /static/images/team-logo-bg.png HTTP/1.1[0m" 304 -
+2025-06-09 13:36:56,368 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:36:56] "[36mGET /static/images/techm-logo.png HTTP/1.1[0m" 304 -
+2025-06-09 13:36:56,373 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:36:56] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-06-09 13:37:00,997 - __main__ - ERROR - Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-06-09 13:37:01,062 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:37:01] "[35m[1mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 500 -
+2025-06-09 13:37:55,893 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:37:55] "GET /signup HTTP/1.1" 200 -
+2025-06-09 13:37:56,223 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:37:56] "[36mGET /static/css/signup.css HTTP/1.1[0m" 304 -
+2025-06-09 13:37:56,223 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:37:56] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2025-06-09 13:37:56,225 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:37:56] "[36mGET /static/js/session-timeout.js HTTP/1.1[0m" 304 -
+2025-06-09 13:37:56,230 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:37:56] "[36mGET /static/images/team-logo-bg.png HTTP/1.1[0m" 304 -
+2025-06-09 13:37:56,232 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:37:56] "[36mGET /static/images/techm-logo.png HTTP/1.1[0m" 304 -
+2025-06-09 13:37:56,481 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:37:56] "[36mGET /static/js/signup.js HTTP/1.1[0m" 304 -
+2025-06-09 13:37:56,536 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:37:56] "[36mGET /static/images/background-1.png HTTP/1.1[0m" 304 -
+2025-06-09 13:38:10,713 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:38:10] "GET /login HTTP/1.1" 200 -
+2025-06-09 13:38:11,047 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:38:11] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2025-06-09 13:38:11,053 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:38:11] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-06-09 13:38:11,055 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:38:11] "[36mGET /static/js/session-timeout.js HTTP/1.1[0m" 304 -
+2025-06-09 13:38:11,057 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:38:11] "[36mGET /static/images/team-logo-bg.png HTTP/1.1[0m" 304 -
+2025-06-09 13:38:11,059 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:38:11] "[36mGET /static/images/techm-logo.png HTTP/1.1[0m" 304 -
+2025-06-09 13:38:11,301 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:38:11] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-06-09 13:38:22,531 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:38:22] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-06-09 13:38:22,841 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:38:22] "GET / HTTP/1.1" 200 -
+2025-06-09 13:38:23,094 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:38:23] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2025-06-09 13:38:23,169 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:38:23] "[36mGET /static/js/session-timeout.js HTTP/1.1[0m" 304 -
+2025-06-09 13:38:23,170 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:38:23] "[36mGET /static/images/techm-logo.png HTTP/1.1[0m" 304 -
+2025-06-09 13:38:23,171 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:38:23] "[36mGET /static/images/team-logo-bg.png HTTP/1.1[0m" 304 -
+2025-06-09 13:38:23,176 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:38:23] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-06-09 13:38:23,481 - werkzeug - INFO - 127.0.0.1 - - [09/Jun/2025 13:38:23] "[36mGET /static/images/background-1.png HTTP/1.1[0m" 304 -
+2025-06-09 13:44:10,955 - werkzeug - INFO -  * Detected change in 'D:\\Dev\\hackathon\\tech-hackathon-new\\hackathon.py', reloading
+2025-06-09 13:44:11,918 - werkzeug - INFO -  * Restarting with stat
+2025-06-09 13:44:23,025 - werkzeug - WARNING -  * Debugger is active!
+2025-06-09 13:44:23,031 - werkzeug - INFO -  * Debugger PIN: 144-627-113
+2025-06-09 13:46:36,200 - werkzeug - INFO -  * Detected change in 'D:\\Dev\\hackathon\\tech-hackathon-new\\hackathon.py', reloading
