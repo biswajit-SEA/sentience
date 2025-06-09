@@ -106,13 +106,27 @@ app = create_azure_app()
 
 # Import the main application code
 try:
-    # This should import all routes and functionality from your main application
-    from hackathon import configure_app
+    # Import the Flask application from hackathon.py
+    from hackathon import app as hackathon_app
     
-    # Configure the application with your existing logic
-    app = configure_app(app)
-except ImportError:
-    app.logger.error("Failed to import hackathon.py - Application may not function correctly")
+    # Merge routes and configurations from hackathon_app to our app
+    for route in hackathon_app.url_map.iter_rules():
+        # Skip the static route as it's already defined
+        if str(route) == '/static/<path:filename>':
+            continue
+            
+        view_func = hackathon_app.view_functions[route.endpoint]
+        methods = route.methods
+        app.add_url_rule(str(route), route.endpoint, view_func, methods=methods)
+        
+    # Copy over configurations from hackathon_app
+    for key, value in hackathon_app.config.items():
+        if key not in app.config:
+            app.config[key] = value
+            
+    app.logger.info(f"Successfully imported routes from hackathon.py")
+except ImportError as e:
+    app.logger.error(f"Failed to import hackathon.py: {str(e)} - Application may not function correctly")
 except Exception as e:
     app.logger.error(f"Error configuring application: {str(e)}")
 
