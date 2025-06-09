@@ -1,0 +1,4 @@
+# This file is used to configure the deployment of the application to Azure App Service
+
+[config]
+SCM_DO_BUILD_DURING_DEPLOYMENT=true

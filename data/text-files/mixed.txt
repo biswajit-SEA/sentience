@@ -1,0 +1,16 @@
+15/05/25, 1:14 pm - Messages and calls are end-to-end encrypted. Only people in this chat can read, listen to, or share them. Learn more.
+15/05/25, 1:15 pm - user1: Hi, I wanted to report a suspicious transaction on my account.
+15/05/25, 1:15 pm - user1: An amount of ₹2,149 was debited from my account at 12:22 PM, but I didn’t make that transaction.
+15/05/25, 1:16 pm - user2: Hello. That sounds concerning. Could you share the last 4 digits of your account and whether your card is still with you?
+15/05/25, 1:17 pm - user1: Yes, account ending 0041. And yes, my card is with me.
+15/05/25, 1:18 pm - user2: Alright. I’m blocking your card right now as a precaution. You’ll need to file a dispute form.
+15/05/25, 1:18 pm - user2: You can do that from our app > Cards > Dispute Transaction or visit the branch.
+15/05/25, 1:19 pm - user1: That’s the problem. Your app keeps crashing whenever I open the Cards section. Been like that for days.
+15/05/25, 1:19 pm - user2: We’re really sorry about that. Our tech team is working on the crash issue reported by several users. In the meantime, would you like me to raise the dispute manually?
+15/05/25, 1:20 pm - user1: Yes, please. That would be helpful.
+15/05/25, 1:21 pm - user2: Done. Your complaint has been logged. You’ll receive an SMS confirmation shortly.
+15/05/25, 1:22 pm - user2: The refund process will take 7–10 working days if the transaction is found fraudulent.
+15/05/25, 1:22 pm - user1: Okay. That’s better. But please fix the app soon, it’s genuinely frustrating.
+15/05/25, 1:23 pm - user2: Totally understand. We’ve already prioritized the issue. Really appreciate your patience.
+15/05/25, 1:24 pm - user1: Alright. Thanks for your help today.
+15/05/25, 1:24 pm - user2: You're welcome. We're here if you need anything further. 😊

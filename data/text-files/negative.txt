@@ -1,0 +1,18 @@
+15/05/25, 11:03 am - Messages and calls are end-to-end encrypted. Only people in this chat can read, listen to, or share them. Learn more.
+15/05/25, 11:04 am - user1: Hello. What is going on with your service?
+15/05/25, 11:04 am - user1: I made a withdrawal from the ATM this morning at 10:25 AM, ₹5,000 got debited but I didn’t get the cash.
+15/05/25, 11:05 am - user1: This is the second time in two months this has happened.
+15/05/25, 11:08 am - user2: Hello. Sorry for the inconvenience. Can you share the ATM location and your account number’s last 4 digits?
+15/05/25, 11:08 am - user1: Location was Axis Bank ATM, Rajdhani Market, Bhubaneswar. Account ends with 8721.
+15/05/25, 11:10 am - user2: Thank you. Please wait while I verify the transaction.
+15/05/25, 11:15 am - user2: I’ve checked. The transaction is showing as “successful” on our side. You’ll need to wait up to 7 working days for auto-reversal.
+15/05/25, 11:15 am - user1: 7 DAYS? Are you serious? It’s *your ATM glitch*, why should I wait so long?
+15/05/25, 11:16 am - user2: Sir, as per interbank transaction policy, the amount reversal depends on the reconciliation process of the acquiring bank.
+15/05/25, 11:16 am - user1: I don’t care about your policy. I want my money back.
+15/05/25, 11:17 am - user2: Sir, please calm down. We understand your concern, but this is the standard process. You can also raise a complaint through our app under “Service Request”.
+15/05/25, 11:17 am - user1: Already done. No response there either.
+15/05/25, 11:18 am - user2: Let me check that for you as well. Please hold.
+15/05/25, 11:20 am - user2: Your complaint has been registered under ref. ID 246799. It’s currently under processing. We will update you as soon as there’s any change.
+15/05/25, 11:21 am - user1: This is pathetic service. Absolutely no accountability.
+15/05/25, 11:22 am - user2: We apologize again for the experience. Your feedback will be forwarded to the concerned team.
+15/05/25, 11:22 am - user1: Yeah sure. Doesn’t matter anymore.

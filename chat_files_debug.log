@@ -1,0 +1,19 @@
+{
+  "timestamp": "2025-05-05 22:54:05.107163",
+  "chat_file_paths": [
+    "uploads\\mixed.txt"
+  ],
+  "type": "<class 'list'>",
+  "length": 1,
+  "is_list": true,
+  "files": [
+    {
+      "index": 0,
+      "path": "uploads\\mixed.txt",
+      "exists": true,
+      "is_file": true,
+      "size": 622,
+      "extension": ".txt"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+15/05/25, 9:01 am - Messages and calls are end-to-end encrypted. Only people in this chat can read, listen to, or share them. Learn more.
+15/05/25, 9:02 am - user1: Good morning
+15/05/25, 9:02 am - user1: I’m Rahul Sen. I wanted some help regarding a transaction I made yesterday.
+15/05/25, 9:03 am - user2: Good morning Rahul. Sure, I can help you with that. Can you please provide more details of the transaction?
+15/05/25, 9:03 am - user1: Yes. I transferred ₹15,000 from my savings account ending with 0911 to another SBI account around 3:45 PM yesterday. The amount got debited but the beneficiary hasn't received it.
+15/05/25, 9:04 am - user2: Okay, let me quickly check the transaction logs. Please hold for a moment.
+15/05/25, 9:06 am - user2: Thank you for waiting. I can confirm the transaction was successfully processed from our end at 3:47 PM. Sometimes it may take up to 24 hours if there's a delay at the beneficiary’s bank.
+15/05/25, 9:06 am - user1: Oh okay. The person hasn’t received it yet. Should I ask them to check with their bank?
+15/05/25, 9:07 am - user2: Yes, please advise them to check their statement or contact their bank’s support. Meanwhile, if the amount isn’t credited by 3:47 PM today, you can raise a complaint, and we’ll escalate it from our side.
+15/05/25, 9:08 am - user1: Got it. Thank you. Also, is there any way I can download a mini statement from the app?
+15/05/25, 9:09 am - user2: Yes. Just open the app > Go to Accounts > Tap on your savings account > Tap on 'View Mini Statement'. You can also download it as a PDF from there.
+15/05/25, 9:10 am - user1: Perfect. Got it now. Thanks a lot for your help. You’ve been really responsive.
+15/05/25, 9:11 am - user2: You're most welcome 😊 If you need any further assistance, feel free to message.
+15/05/25, 9:11 am - user1: Definitely. Have a great day.
+15/05/25, 9:12 am - user2: You too, Rahul. Take care!

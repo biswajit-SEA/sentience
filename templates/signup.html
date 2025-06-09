@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <title>Sign Up - Churn Prediction System</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/index.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/signup.css') }}"
+    />
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='images/team-logo-small.png') }}"
+      type="image/x-icon"
+    />
+    <!-- Font Awesome for eye icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- Google reCAPTCHA v2 -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="{{ url_for('static', filename='js/session-timeout.js') }}"></script>
+  </head>
+  <body>
+    <header class="header-container">
+      <div class="logo-left">
+        <img
+          src="{{ url_for('static', filename='images/team-logo-bg.png') }}"
+          alt="team logo"
+        />
+      </div>
+      <h1>Churn Prediction System</h1>
+      <div class="logo-right">
+        <img
+          src="{{ url_for('static', filename='images/techm-logo.png') }}"
+          alt="techm logo"
+        />
+      </div>
+    </header>
+
+    <div class="auth-container">
+      <h2 style="text-align: center; margin-bottom: 20px">Create an Account</h2>
+
+      {% if error %}
+      <div class="error-message">{{ error }}</div>
+      {% endif %}
+      {% if success %}
+      <div class="success-message">{{ success }}</div>
+      <div id="redirectMessage" class="redirect-message">Redirecting to login page in <span id="countdown">5</span> seconds...</div>
+      <script>
+        // Automatically redirect to login page after showing success message
+        let seconds = 5;
+        const countdownElement = document.getElementById('countdown');
+        
+        const countdownInterval = setInterval(function() {
+          seconds--;
+          countdownElement.textContent = seconds;
+          
+          if (seconds <= 0) {
+            clearInterval(countdownInterval);
+            window.location.href = "{{ url_for('login') }}";
+          }
+        }, 1000);
+      </script>
+      {% endif %}
+
+      <!-- Registration Form -->
+      <form id="signupForm" class="signup-form">
+        <!-- Adding CSRF token field -->
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+
+        <div class="form-group">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" required />
+          <span class="error" id="nameError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <span class="error" id="emailError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <div class="password-wrapper">
+            <input type="password" id="password" name="password" required />
+            <span class="toggle-password" id="togglePassword"
+              ><i class="fas fa-eye"></i
+            ></span>
+          </div>
+          <div class="strength-meter">
+            <div class="strength-meter-fill" id="strengthMeterFill"></div>
+          </div>
+          <div class="password-strength" id="passwordStrength"></div>
+          <div class="common-password-warning" id="commonPasswordWarning">
+            This password is too common. Please choose a stronger password.
+          </div>
+          <div class="password-rules">
+            Password requirements:
+            <div class="password-requirements">
+              <div class="requirement" id="length-requirement">
+                <span class="requirement-icon">✕</span>
+                <span>At least 8 characters</span>
+              </div>
+              <div class="requirement" id="uppercase-requirement">
+                <span class="requirement-icon">✕</span>
+                <span>At least one uppercase letter</span>
+              </div>
+              <div class="requirement" id="lowercase-requirement">
+                <span class="requirement-icon">✕</span>
+                <span>At least one lowercase letter</span>
+              </div>
+              <div class="requirement" id="number-requirement">
+                <span class="requirement-icon">✕</span>
+                <span>At least one number</span>
+              </div>
+              <div class="requirement" id="special-requirement">
+                <span class="requirement-icon">✕</span>
+                <span>At least one special character</span>
+              </div>
+            </div>
+          </div>
+          <span class="error" id="passwordError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="confirm_password">Confirm Password:</label>
+          <div class="password-wrapper">
+            <input
+              type="password"
+              id="confirm_password"
+              name="confirm_password"
+              required
+            />
+            <span class="toggle-password" id="toggleConfirmPassword"
+              ><i class="fas fa-eye"></i
+            ></span>
+          </div>
+          <span class="error" id="confirmPasswordError"></span>
+        </div>
+
+        <div class="recaptcha-container">
+          <div
+            class="g-recaptcha"
+            data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+          ></div>
+        </div>
+        <div class="recaptcha-error" id="recaptchaError">
+          Please verify that you are not a robot
+        </div>
+
+        <button type="submit" class="auth-btn" id="requestOtpBtn">Request OTP</button>
+      </form>
+      
+      <!-- OTP Verification Form -->
+      <div id="otpContainer" class="otp-container">
+        <div class="otp-info">
+          We've sent a verification code to your email address. Please enter the 6-digit code below to complete your registration.
+        </div>
+        
+        <div class="otp-fields">
+          <input type="text" class="otp-field" maxlength="1" data-index="1" />
+          <input type="text" class="otp-field" maxlength="1" data-index="2" />
+          <input type="text" class="otp-field" maxlength="1" data-index="3" />
+          <input type="text" class="otp-field" maxlength="1" data-index="4" />
+          <input type="text" class="otp-field" maxlength="1" data-index="5" />
+          <input type="text" class="otp-field" maxlength="1" data-index="6" />
+        </div>
+        
+        <div class="timer-container">
+          Code expires in: <span class="timer" id="otpTimer">03:00</span>
+        </div>
+        
+        <div class="resend-container">
+          <span class="otp-spinner" id="otpSpinner"></span>
+          <button type="button" class="resend-btn" id="resendOtpBtn" disabled>
+            Resend OTP
+          </button>
+        </div>
+        
+        <div class="error" id="otpError"></div>
+        
+        <button type="button" class="verify-btn" id="verifyOtpBtn">Verify & Create Account</button>
+      </div>
+
+      <div class="auth-links">
+        <p>
+          Already have an account? <a href="{{ url_for('login') }}">Login</a>
+        </p>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/signup.js') }}"></script>
+  </body>
+</html>

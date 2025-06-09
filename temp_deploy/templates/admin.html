@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <title>Admin Dashboard - Churn Prediction System</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/index.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/admin.css') }}"
+    />
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='images/team-logo-small.png') }}"
+      type="image/x-icon"
+    />
+    <script src="{{ url_for('static', filename='js/session-timeout.js') }}"></script>
+  </head>
+  <body>
+    <header class="header-container">
+      <div class="logo-left">
+        <img
+          src="{{ url_for('static', filename='images/team-logo-bg.png') }}"
+          alt="team logo"
+        />
+      </div>
+      <h1>Admin Dashboard</h1>
+      <div class="logo-right">
+        <img
+          src="{{ url_for('static', filename='images/techm-logo.png') }}"
+          alt="techm logo"
+        />
+      </div>
+    </header>
+
+    <!-- Toast notification container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <div class="admin-container">
+      <div class="admin-header">
+        <h2>User Management</h2>
+        <div class="nav-links">
+          <a href="{{ url_for('index') }}">Home</a>
+          <a href="{{ url_for('logout') }}">Logout</a>
+        </div>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for user in users %}
+          <tr data-user-id="{{ user.id }}">
+            <td>{{ user.id }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.role.name }}</td>
+            <td class="user-actions">
+              <button
+                class="edit-btn"
+                data-user-id="{{ user.id }}"
+                data-user-name="{{ user.name }}"
+                data-user-email="{{ user.email }}"
+                data-user-role="{{ user.role.name }}"
+              >
+                Edit
+              </button>
+              <button
+                class="reset-pwd-btn"
+                data-user-id="{{ user.id }}"
+                data-user-name="{{ user.name }}"
+              >
+                Reset Password
+              </button>
+              <button
+                class="delete-btn"
+                data-user-id="{{ user.id }}"
+                data-user-name="{{ user.name }}"
+              >
+                Delete
+              </button>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="deleteModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Confirm Delete</h3>
+          <button class="close-button">&times;</button>
+        </div>
+        <p>
+          Are you sure you want to delete user:
+          <strong id="deleteUserName"></strong>?
+        </p>
+        <p>This action cannot be undone.</p>
+        <div class="modal-actions">
+          <button class="cancel-btn">Cancel</button>
+          <button class="confirm-delete-btn">Delete</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Edit User Modal -->
+    <div id="editModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Edit User</h3>
+          <button class="close-button">&times;</button>
+        </div>
+        <form id="editUserForm">
+          <input type="hidden" id="editUserId" />
+          <div class="edit-form-group">
+            <label for="editName">Name:</label>
+            <input type="text" id="editName" required />
+          </div>
+          <div class="edit-form-group">
+            <label for="editEmail">Email:</label>
+            <input type="email" id="editEmail" required />
+          </div>
+          <div class="edit-form-group">
+            <label for="editRole">Role:</label>
+            <select id="editRole">
+              <option value="admin">Admin</option>
+              <option value="user">User</option>
+            </select>
+          </div>
+          <div class="modal-actions">
+            <button type="button" class="cancel-btn">Cancel</button>
+            <button type="submit" class="save-btn">Save Changes</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Reset Password Modal -->
+    <div id="resetPasswordModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Reset User Password</h3>
+          <button class="close-button">&times;</button>
+        </div>
+        <p>
+          Are you sure you want to reset the password for user:
+          <strong id="resetPasswordUserName"></strong>?
+        </p>
+        <p>A random temporary password will be generated and shown to you.</p>
+        <p>An email notification will be sent to the user.</p>
+        <div class="modal-actions">
+          <button class="cancel-btn">Cancel</button>
+          <button class="confirm-reset-pwd-btn">Reset Password</button>
+        </div>
+        <div
+          id="tempPasswordContainer"
+          class="temp-password-container"
+          style="display: none"
+        >
+          <p style="margin-bottom: 5px">Temporary Password:</p>
+          <div class="temp-password-wrapper">
+            <code id="tempPassword" class="temp-password-code"></code>
+            <button id="copyPasswordBtn" class="copy-btn">Copy</button>
+          </div>
+          <p class="temp-password-note">
+            Please provide this temporary password to the user securely.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/admin.js') }}"></script>
+  </body>
+</html>

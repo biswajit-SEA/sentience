@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <title>File Upload Interface</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/index.css') }}"
+    />
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='images/team-logo-small.png') }}"
+      type="image/x-icon"
+    />
+    <!-- Material Icons for dropdown icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="{{ url_for('static', filename='js/session-timeout.js') }}"></script>
+  </head>
+  <body>
+    <div class="user-menu">
+      <div class="user-info">Welcome, {{ current_user.name }}</div>
+      <div class="dropdown">
+        <div class="user-avatar">{{ current_user.name[:1].upper() }}</div>
+        <div class="dropdown-content">
+          {% if current_user.role.name == 'admin' %}
+          <a href="{{ url_for('admin_dashboard') }}">Admin Dashboard</a>
+          {% endif %}
+          <a href="{{ url_for('change_password') }}">Change Password</a>
+          <a href="{{ url_for('logout') }}">Logout</a>
+        </div>
+      </div>
+    </div>
+
+    <header class="header-container">
+      <div class="logo-left">
+        <img
+          src="{{ url_for('static', filename='images/team-logo-bg.png') }}"
+          alt="team logo"
+        />
+      </div>
+      <h1>File Upload Interface</h1>
+      <div class="logo-right">
+        <img
+          src="{{ url_for('static', filename='images/techm-logo.png') }}"
+          alt="techm logo"
+        />
+      </div>
+    </header>
+
+    <div class="upload-sections">
+      <!-- Audio Section -->
+      <div class="upload-section audio-section">
+        <div class="section-header">
+          <div class="section-icon">🎵</div>
+          <h2>Audio Files</h2>
+        </div>
+        <p>Accepted formats: <b>.mp3, .wav</b></p>
+
+        <div class="upload-container" id="audio-drop-area">
+          <div class="sparkle"></div>
+          <div class="sparkle"></div>
+          <div class="sparkle"></div>
+          <div class="sparkle"></div>
+          <div class="sparkle"></div>
+          <p><b>Drag and Drop audio file(s) here or Click to select</b></p>
+          <input
+            type="file"
+            id="audioFileInput"
+            multiple
+            style="display: none"
+            accept=".mp3,.wav"
+          />
+          <button
+            class="colorBtn"
+            onclick="document.getElementById('audioFileInput').click()"
+          >
+            <b>Select Audio Files</b>
+          </button>
+        </div>
+
+        <div class="file-list">
+          <div id="audioFiles"></div>
+        </div>
+      </div>
+
+      <!-- Data Section -->
+      <div class="upload-section data-section">
+        <div class="section-header">
+          <div class="section-icon">📊</div>
+          <h2>Data Files</h2>
+        </div>
+        <p>Accepted format: <b>.csv, .xlsx</b></p>
+
+        <div class="upload-container" id="data-drop-area">
+          <div class="sparkle"></div>
+          <div class="sparkle"></div>
+          <div class="sparkle"></div>
+          <div class="sparkle"></div>
+          <div class="sparkle"></div>
+          <p><b>Drag and Drop data file(s) here or Click to select</b></p>
+          <input
+            type="file"
+            id="dataFileInput"
+            multiple
+            style="display: none"
+            accept=".csv,.xlsx"
+          />
+          <button
+            class="colorBtn"
+            onclick="document.getElementById('dataFileInput').click()"
+          >
+            <b>Select Data Files</b>
+          </button>
+        </div>
+
+        <div class="file-list">
+          <div id="dataFiles"></div>
+        </div>
+      </div>
+
+      <!-- Chat History Section -->
+      <div class="upload-section chat-section">
+        <div class="section-header">
+          <div class="section-icon">💬</div>
+          <h2>Chat History Files</h2>
+        </div>
+        <p>Accepted formats: <b>.docx, .txt</b></p>
+
+        <div class="upload-container" id="chat-drop-area">
+          <div class="sparkle"></div>
+          <div class="sparkle"></div>
+          <div class="sparkle"></div>
+          <div class="sparkle"></div>
+          <div class="sparkle"></div>
+          <p>
+            <b>Drag and Drop chat history file(s) here or Click to select</b>
+          </p>
+          <input
+            type="file"
+            id="chatFileInput"
+            multiple
+            style="display: none"
+            accept=".docx,.txt"
+          />
+          <button
+            class="colorBtn"
+            onclick="document.getElementById('chatFileInput').click()"
+          >
+            <b>Select Chat Files</b>
+          </button>
+        </div>
+
+        <div class="file-list">
+          <div id="chatFiles"></div>
+        </div>
+      </div>
+    </div>
+
+    <button id="submitBtn" class="submit-btn" disabled>Upload All Files</button>
+
+    <!-- Modal for file upload details -->
+    <div id="uploadModal" class="modal" style="display: none">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>File Upload Summary</h3>
+          <button class="close-button">&times;</button>
+        </div>
+        <div id="modalContent"></div>
+        <div class="modal-actions">
+          <button id="continueButton" class="continue-btn">
+            Continue Upload
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="spinnerOverlay" style="display: none">
+      <span id="loadingSpinner" class="loader"></span>
+    </div>
+
+    <!-- Modal for notification details -->
+    <div id="notificationModal" class="modal" style="display: none">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Prediction Results</h3>
+          <button class="close-notification-button">&times;</button>
+        </div>
+        <div id="notificationContent"></div>
+        <div class="modal-actions">
+          <button id="okButton" class="ok-btn">OK</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+uploads :- 
+
+audio file - .mp3, .wav
+
+data - .csv
+
+chat history - .docx, .txt
+
+
+
+doubt :- 
+
+1- should all files be uploaded before enabling submit button?
+
+2- how many models are to be connected? - 3 models
+
+3- how to show the output? 
+
+4- what kind of output to expect and in what format?
+
+	-> feature - send email to CRM								- done
+
+		-> details :- custID								- done
+	
+	-> feature - notification on dashboard							- done
+
+	-> feature - background :- BFSI image							- done
+
+	-> feature - if score positive :- green, if score negative :- red			- done
+
+	-> feature - login page, registration page database connection with authorization:-	- done
+
+			-> signup								- done
+			
+			-> signin								- done
+
+	-> loading spinner while model is processing						- done
+
+	-> forgot password									- done
+
+	-> signup with otp feature								- done
+
+	-> new password cannot be same as old password						- done
+
+	-> send account creation successful email						- done
+
+	-> whether to keep signup?
+
+
+
+
+
+	-> PROPER TESTING									- 
+
+
+
+
+
+
+Recommended Changes for AWS
+To properly adapt your application for AWS, you should:
+
+1-Replace file-based logging with CloudWatch Logs integration:
+
+	-> Use a library like watchtower to send your logs to CloudWatch
+	
+
+2-Update the logging configuration in your Flask app:
+
+3-For the debug logs that track chat files, either:
+
+	-> Stream these to a dedicated CloudWatch Log group
+	-> Disable this logging in production if not needed
+	-> Consider using a more structured approach like storing this metadata in DynamoDB
+
+
+
+
+
+
