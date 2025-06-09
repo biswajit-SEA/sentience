@@ -25,9 +25,26 @@ def create_azure_app():
     
     # Setup file logging (will be replaced by Azure Application Insights)
     if not app.config['DEBUG']:
-        file_handler = logging.FileHandler('app.log')
-        file_handler.setLevel(logging.INFO)
-        app.logger.addHandler(file_handler)
+        try:
+            file_handler = logging.FileHandler('app.log')
+            file_handler.setLevel(logging.INFO)
+            app.logger.addHandler(file_handler)
+        except Exception as e:
+            logger.error(f"Failed to set up file logging: {str(e)}")
+    
+    # Add Azure diagnostics logging
+    try:
+        handler = logging.StreamHandler()
+        handler.setLevel(logging.INFO)
+        app.logger.addHandler(handler)
+        app.logger.setLevel(logging.INFO)
+        app.logger.info("Azure Flask app initialized")
+    except Exception as e:
+        logger.error(f"Failed to set up Azure diagnostics logging: {str(e)}")
+    
+    # Log the environment variables (but not secret ones)
+    app.logger.info(f"WEBSITE_SITE_NAME: {os.environ.get('WEBSITE_SITE_NAME', 'Not set')}")
+    app.logger.info(f"Debug mode: {app.config['DEBUG']}")
     
     # Configure Azure services
     try:

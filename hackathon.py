@@ -2122,4 +2122,4 @@ if __name__ == "__main__":
     # Call the create tables function before starting the app
     create_tables_and_roles()
 
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=8000, debug=True)
