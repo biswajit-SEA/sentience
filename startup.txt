@@ -1,1 +1,1 @@
-gunicorn --bind=0.0.0.0:8000 app_azure_simplified:app
+gunicorn --bind=0.0.0.0:8000 application:app
